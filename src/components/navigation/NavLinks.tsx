@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import NavLink from "./NavLink";
 
 interface NavLinksProps {
@@ -5,10 +6,11 @@ interface NavLinksProps {
 }
 
 const NavLinks = ({ className }: NavLinksProps) => {
+    const { t } = useTranslation("navbar");
     const mainLinks = [
-        { to: "/", label: "الرئيسية" },
-        { to: "/prices", label: "الأسعار" },
-        { to: "/sales", label: "كلم المبيعات" },
+        { to: "/", label: t("home") },
+        { to: "/", label: t("pricing") },
+        { to: "/", label: t("sales") },
     ];
 
     return (
@@ -22,7 +24,7 @@ const NavLinks = ({ className }: NavLinksProps) => {
                     <li key={to} className="w-full text-center md:w-auto">
                         <NavLink
                             to={to}
-                            className={`flex items-center gap-2 text-sm font-medium justify-center py-4 md:py-0 border-b border-gray-100 md:border-none w-full md:w-auto hover:text-red-600 transition-colors duration-200 `}
+                            className={`flex items-center gap-2 text-md font-bold justify-center py-4 md:py-0 border-b border-gray-100 md:border-none w-full md:w-auto hover:text-red-600 transition-colors duration-200 `}
                         >
                             {label}
                         </NavLink>
