@@ -20,11 +20,11 @@ const NavLinks = ({ className }: NavLinksProps) => {
             {/* <> */}
             {/* Main Navigation Links */}
             <ul className="flex-col items-center w-full md:flex md:flex-row md:w-auto md:gap-8">
-                {mainLinks.map(({ to, label }) => (
-                    <li key={to} className="w-full text-center md:w-auto">
+                {mainLinks.map(({ to, label }, i) => (
+                    <li key={i} className="w-full text-center md:w-auto">
                         <NavLink
                             to={to}
-                            className={`flex items-center gap-2 text-md font-bold justify-center py-4 md:py-0 border-b border-gray-100 md:border-none w-full md:w-auto hover:text-red-600 transition-colors duration-200 `}
+                            className={`flex items-center gap-2 text-base font-bold justify-center py-4 md:py-0 border-b border-gray-100 md:border-none w-full md:w-auto hover:text-red-600 transition-colors duration-200 `}
                         >
                             {label}
                         </NavLink>

@@ -26,12 +26,9 @@ const LanguageSelector = ({ className = "" }: SelectorProps) => {
     );
 
     return (
-        <div className="btn-container">
+        <div className={`${className}`}>
             {alternateLanguage && (
-                <button
-                    onClick={() => changeLanguage(alternateLanguage.code)}
-                    className={className}
-                >
+                <button onClick={() => changeLanguage(alternateLanguage.code)}>
                     {alternateLanguage.lang}
                 </button>
             )}
