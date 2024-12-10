@@ -1,0 +1,7 @@
+{
+    "created": "Shipment Created",
+    "picked-up": "Picked Up",
+    "in_transit": "In Transit",
+    "out_for_delivery": "Out For Delivery",
+    "delivered": "Delivered"
+}

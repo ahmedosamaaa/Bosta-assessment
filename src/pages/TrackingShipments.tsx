@@ -1,11 +1,9 @@
-import { useTranslation } from "react-i18next";
+import TrackingShipmentPage from "@/features/shipment/trackingShipmentPage";
 
 const TrackingShipments = () => {
-    const { t } = useTranslation();
-
     return (
         <div>
-            <h1>{t("greeting")}</h1>
+            <TrackingShipmentPage />
         </div>
     );
 };
