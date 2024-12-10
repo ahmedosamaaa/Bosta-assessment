@@ -5,9 +5,8 @@ const AppLayout = () => {
     return (
         <div className="min-h-screen">
             <Navbar />
-            <main className="px-5 mx-auto my-10 max-w-7xl ">
-                <Outlet />
-            </main>
+
+            <Outlet />
         </div>
     );
 };
