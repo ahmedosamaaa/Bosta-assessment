@@ -1,6 +1,3 @@
-// import { useTranslation } from "react-i18next";
-// import LanguageSelector from "./LanguageSelector";
-
 import { useState } from "react";
 import HamburgerButton from "../HamburgerButton";
 import Logo from "./Logo";
