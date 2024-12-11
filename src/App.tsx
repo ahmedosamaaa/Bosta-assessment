@@ -5,7 +5,7 @@ import TrackingShipments from "./pages/TrackingShipments";
 import PageNotFound from "./pages/PageNotFound";
 import AppLayout from "./layouts/AppLayout";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+// import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import FullPageLoading from "@/components/FullPageLoading";
 
 // React Query settings
