@@ -1,4 +1,4 @@
-import TrackingShipmentPage from "@/features/shipment/trackingShipmentPage";
+import TrackingShipmentPage from "@/features/shipment/TrackingShipmentPage";
 
 const TrackingShipments = () => {
     return (
