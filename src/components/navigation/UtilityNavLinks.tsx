@@ -10,7 +10,7 @@ const UtilityNavLinks = () => {
             label: t("track-your-shipment"),
         },
         {
-            to: "/",
+            to: "/login",
             label: t("login"),
         },
     ];

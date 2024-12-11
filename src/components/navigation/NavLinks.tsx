@@ -8,9 +8,9 @@ interface NavLinksProps {
 const NavLinks = ({ className }: NavLinksProps) => {
     const { t } = useTranslation("navbar");
     const mainLinks = [
-        { to: "/", label: t("home") },
-        { to: "/", label: t("pricing") },
-        { to: "/", label: t("sales") },
+        { to: "/home", label: t("home") },
+        { to: "/pricing", label: t("pricing") },
+        { to: "/sales", label: t("sales") },
     ];
 
     return (
@@ -24,7 +24,7 @@ const NavLinks = ({ className }: NavLinksProps) => {
                     <li key={i} className="w-full text-center md:w-auto">
                         <NavLink
                             to={to}
-                            className={`flex items-center gap-2 text-base font-bold justify-center py-4 md:py-0 border-b border-gray-100 md:border-none w-full md:w-auto hover:text-red-600 transition-colors duration-200 `}
+                            className={`flex items-center gap-2 text-sm md:text-base font-bold justify-center py-4 md:py-0 border-b border-gray-100 md:border-none w-full md:w-auto hover:text-red-600 transition-colors duration-200 `}
                         >
                             {label}
                         </NavLink>

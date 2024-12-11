@@ -7,6 +7,7 @@ import Logo from "./Logo";
 import NavLinks from "./NavLinks";
 import MobileMenu from "./MobileMenu";
 import UtilityNavLinks from "./UtilityNavLinks";
+import SearchIcon from "../SearchIcon";
 
 const Navbar = () => {
     const [menuIsOpen, setMenuOpen] = useState<boolean>(false);
@@ -24,7 +25,8 @@ const Navbar = () => {
                         <UtilityNavLinks />
                     </div>
                     {/* Mobile Menu Button */}
-                    <div className="md:hidden">
+                    <div className="flex items-center justify-center gap-5 md:hidden">
+                        <SearchIcon />
                         <HamburgerButton
                             isOpen={menuIsOpen}
                             onClick={() => setMenuOpen((prev) => !prev)}
