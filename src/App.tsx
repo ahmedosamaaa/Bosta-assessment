@@ -4,9 +4,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import TrackingShipments from "./pages/TrackingShipments";
 import PageNotFound from "./pages/PageNotFound";
 import AppLayout from "./layouts/AppLayout";
-import Spinner from "@/components/FullPageLoading";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import FullPageLoading from "@/components/FullPageLoading";
 
 // React Query settings
 const queryClient = new QueryClient({
@@ -23,14 +23,11 @@ function App() {
             <ReactQueryDevtools initialIsOpen={false} />
 
             <BrowserRouter>
-                <Suspense fallback={<Spinner />}>
+                <Suspense fallback={<FullPageLoading />}>
                     <Routes>
                         <Route path="*" element={<PageNotFound />} />
                         <Route element={<AppLayout />}>
-                            <Route
-                                path="/tracking-shipments"
-                                element={<TrackingShipments />}
-                            />
+                            <Route path="/" element={<TrackingShipments />} />
                         </Route>
                     </Routes>
                 </Suspense>
