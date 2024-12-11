@@ -1,4 +1,4 @@
-export type ShipmentTypes = {
+export interface ShipmentTypes {
     provider: string;
     Type: string;
     ScheduleDate: string;
@@ -54,4 +54,11 @@ export type ShipmentTypes = {
     deliveryCountryCode: string;
     canPayOnline: boolean;
     isOnlinePaymentFeatureEnabled: boolean;
-};
+}
+export type TransitEvents = {
+    timestamp: string;
+    state: string;
+    code: number;
+    msg?: string;
+    exceptionCode?: string;
+}[];
