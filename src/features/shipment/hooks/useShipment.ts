@@ -7,7 +7,7 @@ export function useShipment({
     trackingNumber: string | null;
 }) {
     const {
-        isPending,
+        isLoading,
         data: shipment,
         isSuccess,
         isError,
@@ -15,7 +15,7 @@ export function useShipment({
         queryKey: ["shipment", trackingNumber],
         queryFn: () => getTrackingData({ trackingNumber }),
         retry: false,
+        enabled: !!trackingNumber,
     });
-
-    return { isPending, shipment, isSuccess, isError };
+    return { isLoading, shipment, isSuccess, isError };
 }

@@ -7,14 +7,13 @@ export async function getTrackingData({
 }: {
     trackingNumber: string | null;
 }) {
-    if (!trackingNumber || !trackingNumber.length) {
-        throw new Error("Tracking number is required.");
-    }
-
     try {
+        if (!trackingNumber || !trackingNumber.length) {
+            return;
+        }
         const response = await axios.get(`${BASE_URL}/${trackingNumber}`, {
             headers: {
-                "content-type": "application/json; charset=utf-8",
+                "content-type": "application/json;",
                 "x-requested-by": "Bosta",
             },
         });
