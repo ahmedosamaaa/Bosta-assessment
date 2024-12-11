@@ -59,14 +59,14 @@ const SearchIcon = () => {
                     }`}
                 >
                     <div className="flex flex-col items-center justify-center gap-4">
-                        <p className="self-start text-sm text-gray-600 ps-2">
+                        <p className="self-start text-sm text-ternary-color ps-2">
                             Track your shipment
                         </p>
                         <div className="flex flex-row justify-center">
                             <input
                                 type="text"
                                 id="search"
-                                className="h-12 p-4 text-sm text-gray-900 border border-transparent border-gray-300 rounded-lg shadow-md w-52 sm:w-60 bg-gray-50 focus:ring-0 focus:border-transparent focus-visible:outline-blue-400"
+                                className="h-12 p-4 text-sm border border-transparent rounded-lg shadow-md text-ternary-color border-light-color w-52 sm:w-60 bg-gray-50 focus:ring-0 focus:border-transparent focus-visible:outline-blue-400"
                                 placeholder={t("search")}
                                 defaultValue={trackingNumber ?? ""}
                                 onChange={onSearchChange}
@@ -74,7 +74,7 @@ const SearchIcon = () => {
 
                             <button
                                 onClick={handleSubmit}
-                                className={`flex items-center justify-center  bg-red-600 ${
+                                className={`flex items-center justify-center bg-primary-color ${
                                     isRTL ? "-left-10" : "-right-8"
                                 } w-10 rounded-e-md`}
                             >

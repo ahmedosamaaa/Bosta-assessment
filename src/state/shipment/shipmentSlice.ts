@@ -13,7 +13,7 @@ const initialState: ShipmentState = {
     data: null,
     currentStep: 0,
     currentState: "",
-    progressBarColor: "bg-[#0098A5]",
+    progressBarColor: "bg-secondry-color",
     trackingNumber: "",
 };
 
@@ -34,38 +34,38 @@ const shipmentSlice = createSlice({
                 case 10:
                     state.currentStep = 0;
                     state.currentState = "created";
-                    state.progressBarColor = "bg-[#0098A5]";
+                    state.progressBarColor = "bg-secondry-color";
                     break;
                 case 24:
                     state.currentStep = 1;
                     state.currentState = "picked_up";
-                    state.progressBarColor = "bg-[#0098A5]";
+                    state.progressBarColor = "bg-secondry-color";
                     break;
                 case 20:
                     state.currentStep = 2;
                     state.currentState = "prepare_for_delivery";
-                    state.progressBarColor = "bg-[#0098A5]";
+                    state.progressBarColor = "bg-secondry-color";
                     break;
                 case 41:
                     state.currentStep = 3;
                     state.currentState = "out_for_delivery";
-                    state.progressBarColor = "bg-[#0098A5]";
+                    state.progressBarColor = "bg-secondry-color";
                     break;
                 case 45:
                     state.currentStep = 4;
                     state.currentState = "deliverd";
-                    state.progressBarColor = "bg-[#0098A5]";
+                    state.progressBarColor = "bg-secondry-color";
                     break;
                 case 46:
                     state.currentStep = 2;
                     state.currentState = "canceled-returned";
-                    state.progressBarColor = "bg-red-600";
+                    state.progressBarColor = "bg-primary-color";
                     break;
 
                 default:
                     state.currentStep = 0;
                     state.currentState = "";
-                    state.progressBarColor = "bg-gray-300";
+                    state.progressBarColor = "bg-light-color";
             }
         },
     },

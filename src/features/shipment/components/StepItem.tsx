@@ -37,7 +37,7 @@ const StepItem = ({
                     className={`w-5 h-5 flex justify-center items-center rounded-full  transition-colors duration-200 ${
                         isActive
                             ? `${progressBarColor} text-white`
-                            : "bg-white text-gray-400 border-2"
+                            : "bg-white text-light-color border-2"
                     }`}
                 >
                     {isActive && <Icon {...iconProps} />}
@@ -47,12 +47,12 @@ const StepItem = ({
                         className={`${
                             isActive
                                 ? "font-bold text-black"
-                                : " font-medium text-gray-300"
+                                : " font-medium text-light"
                         }px-2  text-center text-xs sm:text-sm`}
                     >
                         {step.stepName}
                     </p>
-                    <p className="w-full h-5 py-2 text-xs text-gray-700 md:w-20 ">
+                    <p className="w-full h-5 py-2 text-xs text-ternary-color md:w-20 ">
                         {step.step === currentStep + 1
                             ? isRTL
                                 ? toArabicDateTime(date).date

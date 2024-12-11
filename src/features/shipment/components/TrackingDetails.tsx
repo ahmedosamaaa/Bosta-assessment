@@ -24,7 +24,7 @@ const TrackingDetails = () => {
     const [showAll, setShowAll] = useState(false);
     if (!trackDetails || trackDetails.length === 0) {
         return (
-            <p className="text-lg text-gray-500">
+            <p className="text-lg text-light-color">
                 No tracking details available.
             </p>
         );
@@ -80,7 +80,7 @@ const TrackingDetails = () => {
                 return (
                     <div
                         key={groupIndex}
-                        className={`self-start relative my-10 after:content-[''] after:absolute after:-top-6 after:-left-[9px] after:w-4 after:h-4 after:bg-gray-400 after:rounded-full ${
+                        className={`self-start relative my-10 after:content-[''] after:absolute after:-top-6 after:-left-[9px] after:w-4 after:h-4 after:bg-light-color after:rounded-full ${
                             RTL ? "after:-right-[9px]" : "after:-left-[9px]"
                         } border-s-2 p-5`}
                     >
@@ -106,7 +106,7 @@ const TrackingDetails = () => {
                                     }`}
                                 >
                                     <p>{t(item.code.toString())}</p>
-                                    <p className="text-gray-500">
+                                    <p className="text-light-color">
                                         <p className="pt-4">
                                             {RTL
                                                 ? toArabicDateTime(
@@ -125,7 +125,7 @@ const TrackingDetails = () => {
             {totalLength > 4 && (
                 <button
                     onClick={() => setShowAll((showAll) => !showAll)}
-                    className="flex justify-center items-center gap-2 px-4 py-2 mt-4 font-semibold text-[#0098A5] bg-transparent rounded"
+                    className="flex items-center justify-center gap-2 px-4 py-2 mt-4 font-semibold bg-transparent rounded text-secondry-color"
                 >
                     {showAll ? (
                         <>

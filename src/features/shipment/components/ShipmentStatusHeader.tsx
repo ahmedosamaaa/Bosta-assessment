@@ -24,8 +24,8 @@ const ShipmentStatusHeader = () => {
         <section>
             <div className="relative border rounded-md">
                 <div className="p-4">
-                    <div>
-                        <p className="text-gray-400">
+                    <div className="">
+                        <p className="text-light-color">
                             {t("order")}#{" "}
                             {isRTL
                                 ? toArabicNumbers(shipment?.TrackingNumber)
@@ -34,7 +34,7 @@ const ShipmentStatusHeader = () => {
                         <p className="py-2 text-2xl font-bold ">
                             {t("arrived_by")}{" "}
                             {shipment.PromisedDate && (
-                                <span className="text-[#0098A5]">
+                                <span className="text-secondry-color">
                                     {isRTL
                                         ? toArabicDateTime(
                                               shipment?.PromisedDate

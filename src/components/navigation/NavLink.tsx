@@ -12,7 +12,7 @@ const NavLink = ({ to, children, className = "" }: NavLinkProps) => {
             to={to}
             className={({ isActive }) =>
                 `transition-colors duration-200 hover:text-red-800  ${
-                    isActive ? "text-red-600 font-bold" : "text-gray-700"
+                    isActive ? "primary-color font-bold" : "text-ternary-color"
                 } ${className}`
             }
         >

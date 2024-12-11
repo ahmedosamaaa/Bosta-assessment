@@ -15,7 +15,7 @@ const SearchInput = ({
             <input
                 type="text"
                 id="search"
-                className="p-4 text-sm text-gray-900 border border-transparent border-gray-300 rounded-lg shadow-md bg-gray-50 md:w-96 focus:ring-0 focus:border-transparent focus-visible:outline-blue-400"
+                className="p-4 text-sm border border-transparent border-light-color rounded-lg shadow-md text-ternary-color bg-gray-50 md:w-96 focus:ring-0 focus:border-transparent focus-visible:outline-blue-400"
                 placeholder={t("search")}
                 defaultValue={trackingNumber ?? ""}
                 onChange={onSearchChange}
@@ -23,7 +23,7 @@ const SearchInput = ({
 
             <button
                 onClick={onSubmit}
-                className={`absolute flex items-center justify-center h-full bg-red-600 ${
+                className={`absolute flex items-center justify-center h-full bg-primary-color ${
                     isRTL ? "-left-10" : "-right-10"
                 } w-14 rounded-e-md`}
             >
