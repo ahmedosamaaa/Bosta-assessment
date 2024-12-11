@@ -43,7 +43,7 @@ const TrackingShipmentPage = () => {
             <div>
                 <Header />
                 <Error>{t("no_record_found")}</Error>
-                <div className="mx-auto mt-32 w-72">
+                <div className="w-4/6 mx-auto mt-32 sm:w-72">
                     <img src="/images/DeliveryMan.svg" alt="" />
                 </div>
             </div>
@@ -72,7 +72,7 @@ const TrackingShipmentPage = () => {
     return (
         <div>
             <Header />
-            <div className="mx-auto mt-32 w-72">
+            <div className="w-4/6 mx-auto mt-32 sm:w-72">
                 <img src="/images/DeliveryMan.svg" alt="" />
             </div>
         </div>
