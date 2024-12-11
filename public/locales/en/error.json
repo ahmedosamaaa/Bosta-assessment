@@ -1,0 +1,5 @@
+{
+    "no_record_found": "No record of this tracking number can be found at this time. Please check the number and try again later. For further assistance, please contact Customer Service.",
+    "fetch_failed": "Failed to fetch tracking data",
+    "no_shipment_data": "No Shipment Data"
+}

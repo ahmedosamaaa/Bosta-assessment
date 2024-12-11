@@ -15,25 +15,39 @@ const englishToArabicDigits: { [key: string]: string } = {
     "9": "٩",
 };
 
-//Parsing Date and Time
-export const dateParse = (dateStr: string) => {
+/**
+ *Parsing Date and Time
+ *
+ * @param {string} dateStr
+ * @returns {{ date: string; time: string }}
+ */
+export const dateParse = (dateStr: string): { date: string; time: string } => {
     const date = parseISO(dateStr);
 
     const parsedDate = format(date, "EEEE d MMMM yyyy");
-    const time = format(date, "h:mm:ss aaa");
+    const time = format(date, "h:mm aaa");
 
     return { date: parsedDate, time };
 };
 
-//  Converts English numbers to Arabic numbers
-
+/**
+ * Converts English numbers to Arabic numbers
+ *
+ * @param {(number | string)} number
+ * @returns {string}
+ */
 export const toArabicNumbers = (number: number | string): string => {
     return number
         .toString()
         .replace(/[0-9]/g, (digit) => englishToArabicDigits[digit] || digit);
 };
 
-//  Converts an English date string to Arabic
+/**
+ *  Converts an English date string to Arabic
+ *
+ * @param dateStr string
+ * @returns { date: string; time: string }
+ */
 export const toArabicDateTime = (
     dateStr: string
 ): { date: string; time: string } => {
@@ -41,7 +55,7 @@ export const toArabicDateTime = (
         const date = parseISO(dateStr);
         // Format the date and time separately
         const arabicDate = format(date, "EEEE d MMMM yyyy", { locale: ar });
-        const arabicTime = format(date, "h:mm:ss a", { locale: ar });
+        const arabicTime = format(date, "h:mm a", { locale: ar });
 
         return {
             date: toArabicNumbers(arabicDate),

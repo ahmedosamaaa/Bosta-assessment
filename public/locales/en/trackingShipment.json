@@ -1,7 +1,18 @@
 {
+    "order": "Order",
+    "arrived_by": "Arrived by",
+    "order_expected_date": "your order is expected to arrive within 2-3 working days",
     "created": "Shipment Created",
-    "picked-up": "Picked Up",
+    "picked_up": "Picked Up",
     "in_transit": "In Transit",
     "out_for_delivery": "Out For Delivery",
-    "delivered": "Delivered"
+    "delivered": "Delivered",
+    "tracking_details": "Tracking Details",
+    "show_less": "Less",
+    "show_more": "More",
+    "10": "Your order is created, Bosta will pick it up once your shipper is ready",
+    "24": "Order is received at Bosta warehouses and being processed.",
+    "20": "Order is being prepared for delivery.",
+    "41": "Order is out for delivery",
+    "47": "Order is rescheduled as you were not reachable on the phone"
 }
