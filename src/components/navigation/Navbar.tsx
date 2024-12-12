@@ -18,10 +18,12 @@ const Navbar = () => {
                 <div className="flex items-center justify-between h-16 gap-6 ">
                     <div className="flex items-center gap-4">
                         <Logo link="/" />
-                        <ToggleMode
-                            isDarkMode={isDarkMode}
-                            toggleDarkMode={toggleDarkMode}
-                        />
+                        <div className="hidden md:block">
+                            <ToggleMode
+                                isDarkMode={isDarkMode}
+                                toggleDarkMode={toggleDarkMode}
+                            />
+                        </div>
                     </div>
 
                     {/* Desktop Navigation */}
@@ -33,6 +35,10 @@ const Navbar = () => {
                     </div>
                     {/* Mobile Menu Button */}
                     <div className="flex items-center justify-center gap-5 md:hidden">
+                        <ToggleMode
+                            isDarkMode={isDarkMode}
+                            toggleDarkMode={toggleDarkMode}
+                        />
                         <SearchIcon />
                         <HamburgerButton
                             isOpen={menuIsOpen}
