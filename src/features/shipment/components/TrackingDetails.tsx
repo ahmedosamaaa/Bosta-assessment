@@ -30,52 +30,7 @@ const TrackingDetails = () => {
         );
     }
 
-    // const groupedDetails = [
-    //     [
-    //         {
-    //             timestamp: "2024-09-11T12:18:20.913Z",
-    //             state: "Your order is created, Bosta will pick it up once your shipper is ready",
-    //             code: 10,
-    //         },
-    //         {
-    //             timestamp: "2024-09-11T12:19:54.308Z",
-    //             state: "Order is received at Bosta warehouses and being processed.",
-    //             code: 24,
-    //         },
-    //         {
-    //             timestamp: "2024-09-11T12:33:39.086Z",
-    //             state: "Order is out for delivery",
-    //             msg: "Will be Deliverd from 10 AM to 6 PM According to the Courier Route",
-    //             code: 41,
-    //         },
-    //         {
-    //             timestamp: "2024-09-11T12:33:58.926Z",
-    //             state: "Exception 16",
-    //             code: 47,
-    //         },
-    //         {
-    //             timestamp: "2024-09-11T12:34:11.574Z",
-    //             state: "Order is received at Bosta warehouses and being processed.",
-    //             code: 24,
-    //         },
-    //     ],
-    //     [
-    //         {
-    //             timestamp: "2024-09-18T08:14:00.206Z",
-    //             state: "Order is out for delivery",
-    //             msg: "Will be Deliverd from 10 AM to 6 PM According to the Courier Route",
-    //             code: 41,
-    //         },
-    //         {
-    //             timestamp: "2024-09-18T08:29:48.654Z",
-    //             state: "Order is out for delivery",
-    //             msg: "Will be Deliverd from 10 AM to 6 PM According to the Courier Route",
-    //             code: 41,
-    //         },
-    //     ],
-    // ];
     const groupedDetails: TrackingDetail[][] = [];
-    // console.log(groupedDetails);
     let currentGroup: TrackingDetail[] = [];
     trackDetails.forEach((detail, index) => {
         const currentDate = RTL
@@ -108,8 +63,6 @@ const TrackingDetails = () => {
 
     const visibleDetails = showAll ? trackDetails : trackDetails.slice(0, 5);
 
-    console.log(groupedDetails);
-
     // Re-group visibleDetails to match the original structure
     const regroupDetails = [];
     let index = 0;
@@ -119,8 +72,6 @@ const TrackingDetails = () => {
         );
         if (groupVisible.length) regroupDetails.push(groupVisible);
     }
-
-    console.log(groupedDetails);
 
     return (
         <section className="flex flex-col items-center justify-center mt-10">
