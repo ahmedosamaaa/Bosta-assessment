@@ -22,19 +22,19 @@ const ShipmentStatusHeader = () => {
     }
     return (
         <section>
-            <div className="relative border rounded-md">
+            <div className="relative border rounded-md border-border-color">
                 <div className="p-4">
                     <div className="">
-                        <p className="text-light-color">
+                        <p className="text-text-secondary-color">
                             {t("order")}#{" "}
                             {isRTL
                                 ? toArabicNumbers(shipment?.TrackingNumber)
                                 : shipment?.TrackingNumber}
                         </p>
-                        <p className="py-2 text-2xl font-bold ">
+                        <p className="py-2 text-2xl font-bold text-text-color">
                             {t("arrived_by")}{" "}
                             {shipment.PromisedDate && (
-                                <span className="text-secondry-color">
+                                <span className="text-secondary-color">
                                     {isRTL
                                         ? toArabicDateTime(
                                               shipment?.PromisedDate
@@ -44,10 +44,12 @@ const ShipmentStatusHeader = () => {
                                 </span>
                             )}
                         </p>
-                        <p className="py-2">{t("order_expected_date")}</p>
+                        <p className="py-2 text-text-secondary-color">
+                            {t("order_expected_date")}
+                        </p>
                     </div>
                 </div>
-                <hr />
+                <hr className="border-border-color" />
                 <ShipmentProgressBar />
             </div>
         </section>

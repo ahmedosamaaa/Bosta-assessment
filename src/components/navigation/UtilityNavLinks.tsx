@@ -21,7 +21,7 @@ const UtilityNavLinks = () => {
                 <NavLink
                     key={index}
                     to={to}
-                    className={`relative flex items-center gap-2 text-base font-bold justify-center py-4 md:py-0 border-b border-gray-100 md:border-none w-full md:w-auto hover:text-primary-color transition-colors duration-200 ${
+                    className={`relative flex items-center gap-2 text-base text-text-color font-bold justify-center py-4 md:py-0 border-b border-border-color md:border-none w-full md:w-auto hover:text-primary-color transition-colors duration-200 ${
                         index === 0
                             ? `md:after:content-[""] md:after:w-[1.5px] md:after:h-6 md:after:bg-gray-200 md:after:absolute md:after:top-1/2 md:after:-translate-y-1/2 ${
                                   i18n.language === "ar"

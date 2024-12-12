@@ -15,17 +15,17 @@ function HamburgerButton({ isOpen, onClick }: HamburgerButtonProps) {
                 <div className="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 origin-center overflow-hidden ">
                     {/* Hamburger bars */}
                     <div
-                        className={`bg-black h-[2px] w-7 transform transition-all duration-300 origin-left ${
+                        className={`bg-text-color h-[2px] w-7 transform transition-all duration-300 origin-left ${
                             isOpen ? "translate-x-10" : ""
                         }`}
                     />
                     <div
-                        className={`bg-black h-[2px] w-7 rounded transform transition-all duration-300 delay-75 ${
+                        className={`bg-text-color h-[2px] w-7 rounded transform transition-all duration-300 delay-75 ${
                             isOpen ? "translate-x-10" : ""
                         }`}
                     />
                     <div
-                        className={`bg-black h-[2px] w-7 transform transition-all duration-300 origin-left delay-150 ${
+                        className={`bg-text-color h-[2px] w-7 transform transition-all duration-300 origin-left delay-150 ${
                             isOpen ? "translate-x-10" : ""
                         }`}
                     />
@@ -37,12 +37,12 @@ function HamburgerButton({ isOpen, onClick }: HamburgerButtonProps) {
                         }`}
                     >
                         <div
-                            className={`absolute bg-black h-[2px] w-5 transform transition-all duration-500 delay-300 ${
+                            className={`absolute bg-text-color h-[2px] w-5 transform transition-all duration-500 delay-300 ${
                                 isOpen ? "rotate-45" : "rotate-0"
                             }`}
                         />
                         <div
-                            className={`absolute bg-black h-[2px] w-5 transform transition-all duration-500 delay-300 ${
+                            className={`absolute bg-text-color h-[2px] w-5 transform transition-all duration-500 delay-300 ${
                                 isOpen ? "-rotate-45" : "rotate-0"
                             }`}
                         />

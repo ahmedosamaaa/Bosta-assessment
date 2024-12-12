@@ -11,8 +11,8 @@ const NavLink = ({ to, children, className = "" }: NavLinkProps) => {
         <RouterNavLink
             to={to}
             className={({ isActive }) =>
-                `transition-colors duration-200 hover:text-red-800  ${
-                    isActive ? "primary-color font-bold" : "text-ternary-color"
+                `transition-colors duration-200 hover:text-primary-color  ${
+                    isActive ? "text-[#e30613] font-bold" : "text-text-color"
                 } ${className}`
             }
         >

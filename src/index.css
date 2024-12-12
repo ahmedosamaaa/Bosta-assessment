@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    /* Light Mode Variables */
+    --background-color: #ffffff;
+    --primary-color: #e30613;
+    --secondary-color: #0098a5;
+    --ternary-color: #111619;
+    --text-color: #111619;
+    --text-color-contrast: #e2e8f0;
+    --text-secondary-color: #4a4a4a;
+    --card-background-color: #f9fafb;
+    --border-color: #d0d5dd;
+    --icon-color: #6b7280;
+    --bluelight-color: #f3fafb;
+    --navbar-color: #ffff;
+    --toggle-mode-color: #080c3e;
+    --mobile-nav: #ffffff;
+}
+
+.dark {
+    /* Dark Mode Variables */
+    --background-color: #000319;
+    --primary-color: #e30613;
+    --secondary-color: #00a5b0;
+    --ternary-color: #f0f1f4;
+    --text-color: #e2e8f0;
+    --text-color-contrast: #111619;
+    --text-secondary-color: #94a3b8;
+    --card-background-color: #2d3748;
+    --border-color: #4a5568;
+    --icon-color: #a0aec0;
+    --bluelight-color: #000421d9;
+    --navbar-color: #000319;
+    --toggle-mode-color: #ffffff;
+    --mobile-nav: #000421;
+}

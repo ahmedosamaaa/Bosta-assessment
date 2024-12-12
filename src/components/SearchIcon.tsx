@@ -46,27 +46,31 @@ const SearchIcon = () => {
     return (
         <div>
             <button onClick={handleClick}>
-                {isOpen ? <FaSearch /> : <FaSearch />}
+                {isOpen ? (
+                    <FaSearch className="text-text-color" />
+                ) : (
+                    <FaSearch className="text-text-color" />
+                )}
             </button>
 
             {isOpen && (
                 <div
                     ref={divRef}
-                    className={`absolute top-14 left-1/2 transform -translate-x-1/2 z-[1000] w-72 sm:w-80 h-36 bg-white p-4 rounded-md shadow-md mt-5 transition-all duration-300 ${
+                    className={`absolute top-14 left-1/2 transform -translate-x-1/2 z-[1000] w-72 sm:w-80 h-36 bg-background-color p-4 rounded-md shadow-md mt-5 transition-all duration-300 ${
                         isClosing
                             ? "opacity-0 scale-90"
                             : "opacity-100 scale-100"
                     }`}
                 >
                     <div className="flex flex-col items-center justify-center gap-4">
-                        <p className="self-start text-sm text-ternary-color ps-2">
-                            Track your shipment
+                        <p className="self-start text-sm text-text-color ps-2">
+                            {t("search-title")}
                         </p>
-                        <div className="flex flex-row justify-center">
+                        <div className="relative flex flex-row self-start justify-center ">
                             <input
                                 type="text"
                                 id="search"
-                                className="h-12 p-4 text-sm border border-transparent rounded-lg shadow-md text-ternary-color border-light-color w-52 sm:w-60 bg-gray-50 focus:ring-0 focus:border-transparent focus-visible:outline-blue-400"
+                                className="h-12 p-4 text-sm bg-white border rounded-lg shadow-md border-border-color sm:w-60 bg-background-color text-background-color focus:ring-0 focus-visible:outline-blue-400 focus-visible:border active:bg-white focus:outline-none w-[250px]"
                                 placeholder={t("search")}
                                 defaultValue={trackingNumber ?? ""}
                                 onChange={onSearchChange}
@@ -74,8 +78,8 @@ const SearchIcon = () => {
 
                             <button
                                 onClick={handleSubmit}
-                                className={`flex items-center justify-center bg-primary-color ${
-                                    isRTL ? "-left-10" : "-right-8"
+                                className={`absolute flex items-center h-full justify-center bg-primary-color ${
+                                    isRTL ? "left-0" : "right-0"
                                 } w-10 rounded-e-md`}
                             >
                                 <IoSearchSharp size={25} color="#fff" />

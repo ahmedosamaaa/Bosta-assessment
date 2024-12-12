@@ -82,12 +82,12 @@ const TrackingDetails = () => {
                 return (
                     <div
                         key={groupIndex}
-                        className={`self-start relative my-10 after:content-[''] after:absolute after:-top-6 after:-left-[9px] after:w-4 after:h-4 after:bg-light-color after:rounded-full ${
+                        className={`self-start relative mt-10 after:content-[''] after:absolute after:-top-6 after:-left-[9px] after:w-4 after:h-4 after:bg-border-color after:rounded-full ${
                             RTL ? "after:-right-[9px]" : "after:-left-[9px]"
-                        } border-s-2 p-5`}
+                        } border-s-2 border-border-color p-5`}
                     >
                         {/* Display the date based on the RTL condition */}
-                        <p className="absolute text-lg font-semibold text-text-color -top-[29px]">
+                        <p className="absolute text-lg  font-semibold text-text-color -top-[29px]">
                             {RTL
                                 ? toArabicDateTime(group[0].timestamp).date
                                 : dateParse(group[0].timestamp).date}
@@ -100,18 +100,22 @@ const TrackingDetails = () => {
                             return (
                                 <div
                                     key={itemIndex}
-                                    className={`flex flex-col p-4 my-4 border rounded-md w-fit ${
+                                    className={`flex flex-col p-4 my-4 border border-border-color rounded-md w-fit ${
                                         isLastItemInLastGroup && !showAll
                                             ? "opacity-30"
                                             : ""
                                     }`}
                                 >
                                     {item.code ? (
-                                        <p>{t(item.code?.toString())}</p>
+                                        <p className="text-text-color">
+                                            {t(item.code?.toString())}
+                                        </p>
                                     ) : (
-                                        <p>{t("canceled")}</p>
+                                        <p className="text-text-color">
+                                            {t("canceled")}
+                                        </p>
                                     )}
-                                    {/* <p>{t(item.code?.toString())}</p> */}
+
                                     <p className="text-text-color">
                                         <p className="pt-4">
                                             {RTL
@@ -131,7 +135,7 @@ const TrackingDetails = () => {
             {totalLength > 4 && (
                 <button
                     onClick={() => setShowAll((showAll) => !showAll)}
-                    className="flex items-center justify-center gap-2 px-4 py-2 mt-4 font-semibold bg-transparent rounded text-secondry-color"
+                    className="flex items-center justify-center gap-2 px-4 py-2 mt-4 font-semibold bg-transparent rounded text-secondary-color"
                 >
                     {showAll ? (
                         <>

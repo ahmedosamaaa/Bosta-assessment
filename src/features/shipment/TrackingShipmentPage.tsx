@@ -55,13 +55,15 @@ const TrackingShipmentPage = () => {
         return (
             <div>
                 <Header />
-                <div className="px-10 mx-auto my-10 max-w-7xl">
+                <div className="px-10 py-5 mx-auto mt-10 max-w-7xl">
                     <ShipmentStatusHeader />
                     {shipment.data.TransitEvents &&
                     shipment.data.TransitEvents.length > 0 ? (
                         <TrackingDetails />
                     ) : (
-                        <p className="h-24 py-5 mt-5">No Tracking Details</p>
+                        <p className="h-24 py-5 mt-5 text-text-color">
+                            No Tracking Details
+                        </p>
                     )}
                 </div>
             </div>

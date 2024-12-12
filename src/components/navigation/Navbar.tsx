@@ -5,15 +5,25 @@ import NavLinks from "./NavLinks";
 import MobileMenu from "./MobileMenu";
 import UtilityNavLinks from "./UtilityNavLinks";
 import SearchIcon from "../SearchIcon";
+import ToggleMode from "../ToggleMode";
+import useDarkMode from "@/hooks/useDarkMode";
 
 const Navbar = () => {
     const [menuIsOpen, setMenuOpen] = useState<boolean>(false);
+    const { isDarkMode, toggleDarkMode } = useDarkMode();
 
     return (
-        <nav className="relative bg-white border-b border-gray-100 ">
+        <nav className="relative border-b border-navbar-color bg-navbar-color ">
             <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16 gap-6 ">
-                    <Logo link="/" />
+                    <div className="flex items-center gap-4">
+                        <Logo link="/" />
+                        <ToggleMode
+                            isDarkMode={isDarkMode}
+                            toggleDarkMode={toggleDarkMode}
+                        />
+                    </div>
+
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex md:justify-between md:ml-8">
                         <NavLinks />
