@@ -36,6 +36,19 @@ presenting them in a user-friendly format. Here's an overview:
 
 ## <a name="features">🔋 Features</a>
 
+👉 **RTL Support**: Ensures a seamless experience for Right-to-Left languages
+like Arabic, with proper alignment and date formatting.
+
+
+👉 **Dark Mode Support**: Adds a user-friendly dark mode for comfortable viewing in low-light environments, with smooth transitions between light and dark themes.
+
+👉 **Customizable Theme**: Provides the flexibility to adjust colors and themes,
+allowing it to match the parent application's branding.
+
+👉 **Modern Styling with TailwindCSS**: Utilizes TailwindCSS for a responsive
+and visually appealing design, ensuring compatibility with different screen
+sizes.
+
 👉 **Date-Based Grouping**: Organizes shipment events under visually distinct
 headers based on their dates for better readability and navigation.
 
@@ -43,21 +56,11 @@ headers based on their dates for better readability and navigation.
 (beyond 5) under a group and includes a stylish "Show More" button for users to
 reveal them.
 
-👉 **RTL Support**: Ensures a seamless experience for Right-to-Left languages
-like Arabic, with proper alignment and date formatting.
-
-👉 **Modern Styling with TailwindCSS**: Utilizes TailwindCSS for a responsive
-and visually appealing design, ensuring compatibility with different screen
-sizes.
-
 👉 **Timeline Visualization**: Each shipment event appears on a clean,
 structured timeline, making it easier to follow the shipment's progress.
 
 👉 **Light and Minimal Aesthetic**: Keeps the interface clean and
 distraction-free with minimalistic styling.
-
-👉 **Customizable Theme**: Provides the flexibility to adjust colors and themes,
-allowing it to match the parent application's branding.
 
 👉 **Collapsible Sections**: Introduces collapsible headers for date groups,
 enabling users to collapse or expand shipment details as needed.
