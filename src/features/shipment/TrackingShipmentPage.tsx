@@ -62,7 +62,7 @@ const TrackingShipmentPage = () => {
                         <TrackingDetails />
                     ) : (
                         <p className="h-24 py-5 mt-5 text-text-color">
-                            No Tracking Details
+                            {t("no_tracking_details")}
                         </p>
                     )}
                 </div>
