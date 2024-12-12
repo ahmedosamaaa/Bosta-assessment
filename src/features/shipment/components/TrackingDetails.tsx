@@ -24,14 +24,58 @@ const TrackingDetails = () => {
     const [showAll, setShowAll] = useState(false);
     if (!trackDetails || trackDetails.length === 0) {
         return (
-            <p className="text-lg text-light-color">
+            <p className="text-lg text-text-color">
                 No tracking details available.
             </p>
         );
     }
 
+    // const groupedDetails = [
+    //     [
+    //         {
+    //             timestamp: "2024-09-11T12:18:20.913Z",
+    //             state: "Your order is created, Bosta will pick it up once your shipper is ready",
+    //             code: 10,
+    //         },
+    //         {
+    //             timestamp: "2024-09-11T12:19:54.308Z",
+    //             state: "Order is received at Bosta warehouses and being processed.",
+    //             code: 24,
+    //         },
+    //         {
+    //             timestamp: "2024-09-11T12:33:39.086Z",
+    //             state: "Order is out for delivery",
+    //             msg: "Will be Deliverd from 10 AM to 6 PM According to the Courier Route",
+    //             code: 41,
+    //         },
+    //         {
+    //             timestamp: "2024-09-11T12:33:58.926Z",
+    //             state: "Exception 16",
+    //             code: 47,
+    //         },
+    //         {
+    //             timestamp: "2024-09-11T12:34:11.574Z",
+    //             state: "Order is received at Bosta warehouses and being processed.",
+    //             code: 24,
+    //         },
+    //     ],
+    //     [
+    //         {
+    //             timestamp: "2024-09-18T08:14:00.206Z",
+    //             state: "Order is out for delivery",
+    //             msg: "Will be Deliverd from 10 AM to 6 PM According to the Courier Route",
+    //             code: 41,
+    //         },
+    //         {
+    //             timestamp: "2024-09-18T08:29:48.654Z",
+    //             state: "Order is out for delivery",
+    //             msg: "Will be Deliverd from 10 AM to 6 PM According to the Courier Route",
+    //             code: 41,
+    //         },
+    //     ],
+    // ];
     const groupedDetails: TrackingDetail[][] = [];
-
+    // console.log(groupedDetails);
     let currentGroup: TrackingDetail[] = [];
     trackDetails.forEach((detail, index) => {
         const currentDate = RTL
@@ -49,19 +93,22 @@ const TrackingDetails = () => {
             currentGroup.push(detail);
         } else {
             if (currentGroup.length > 0) {
-                groupedDetails.push(currentGroup);
+                groupedDetails.push([...currentGroup]); // Push a copy instead of reference
             }
             currentGroup = [detail];
         }
     });
 
+    // Push the final group
     if (currentGroup.length > 0) {
-        groupedDetails.push(currentGroup);
+        groupedDetails.push([...currentGroup]); // Push a copy instead of reference
     }
 
     const totalLength = trackDetails.length;
 
     const visibleDetails = showAll ? trackDetails : trackDetails.slice(0, 5);
+
+    console.log(groupedDetails);
 
     // Re-group visibleDetails to match the original structure
     const regroupDetails = [];
@@ -73,10 +120,14 @@ const TrackingDetails = () => {
         if (groupVisible.length) regroupDetails.push(groupVisible);
     }
 
+    console.log(groupedDetails);
+
     return (
         <section className="flex flex-col items-center justify-center mt-10">
-            {regroupDetails.map((group, groupIndex) => {
+            {regroupDetails?.map((group, groupIndex) => {
+                if (group.length <= 0) return null;
                 const isLastGroup = groupIndex === regroupDetails.length - 1;
+
                 return (
                     <div
                         key={groupIndex}
@@ -85,11 +136,10 @@ const TrackingDetails = () => {
                         } border-s-2 p-5`}
                     >
                         {/* Display the date based on the RTL condition */}
-                        <p className="absolute text-lg font-semibold -top-[29px]">
+                        <p className="absolute text-lg font-semibold text-text-color -top-[29px]">
                             {RTL
-                                ? toArabicDateTime(group[groupIndex].timestamp)
-                                      .date
-                                : dateParse(group[groupIndex].timestamp).date}
+                                ? toArabicDateTime(group[0].timestamp).date
+                                : dateParse(group[0].timestamp).date}
                         </p>
 
                         {/* Map over each item in the group */}
@@ -105,8 +155,13 @@ const TrackingDetails = () => {
                                             : ""
                                     }`}
                                 >
-                                    <p>{t(item.code.toString())}</p>
-                                    <p className="text-light-color">
+                                    {item.code ? (
+                                        <p>{t(item.code?.toString())}</p>
+                                    ) : (
+                                        <p>{t("canceled")}</p>
+                                    )}
+                                    {/* <p>{t(item.code?.toString())}</p> */}
+                                    <p className="text-text-color">
                                         <p className="pt-4">
                                             {RTL
                                                 ? toArabicDateTime(

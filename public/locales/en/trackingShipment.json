@@ -14,5 +14,8 @@
     "24": "Order is received at Bosta warehouses and being processed.",
     "20": "Order is being prepared for delivery.",
     "41": "Order is out for delivery",
-    "47": "Order is rescheduled as you were not reachable on the phone"
+    "47": "Order is rescheduled as you were not reachable on the phone",
+    "30": "Order is being transferred to Bosta's Hubs.",
+    "46": "Order is returned back to the shipper",
+    "canceled": "Order is canceled and it will be returned back to the shipper"
 }
