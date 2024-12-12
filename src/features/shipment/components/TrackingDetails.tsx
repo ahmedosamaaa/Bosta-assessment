@@ -48,7 +48,7 @@ const TrackingDetails = () => {
             currentGroup.push(detail);
         } else {
             if (currentGroup.length > 0) {
-                groupedDetails.push([...currentGroup]); // Push a copy instead of reference
+                groupedDetails.push([...currentGroup]);
             }
             currentGroup = [detail];
         }
@@ -56,7 +56,7 @@ const TrackingDetails = () => {
 
     // Push the final group
     if (currentGroup.length > 0) {
-        groupedDetails.push([...currentGroup]); // Push a copy instead of reference
+        groupedDetails.push([...currentGroup]);
     }
 
     const totalLength = trackDetails.length;
