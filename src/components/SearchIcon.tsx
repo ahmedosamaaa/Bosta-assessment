@@ -70,7 +70,7 @@ const SearchIcon = () => {
                             <input
                                 type="text"
                                 id="search"
-                                className="h-12 p-4 text-sm bg-white border rounded-lg shadow-md border-border-color sm:w-60 bg-background-color text-background-color focus:ring-0 focus-visible:outline-blue-400 focus-visible:border active:bg-white focus:outline-none w-[250px]"
+                                className="h-12 p-4 text-sm bg-white border rounded-lg shadow-md border-border-color sm:w-60 bg-background-color text-black focus:ring-0 focus-visible:outline-blue-400 focus-visible:border active:bg-white focus:outline-none w-[250px]"
                                 placeholder={t("search")}
                                 defaultValue={trackingNumber ?? ""}
                                 onChange={onSearchChange}
