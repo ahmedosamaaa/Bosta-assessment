@@ -16,7 +16,7 @@ const SearchInput = ({
             <input
                 type="text"
                 id="search"
-                className="p-4 text-sm border rounded-lg shadow-md border-border-color  bg-white text-background-color focus:ring-0 md:w-[400px] focus-visible:outline-blue-400 focus-visible:border active:bg-white focus:outline-none"
+                className="p-4 text-sm border rounded-lg shadow-md border-border-color  bg-white text-black focus:ring-0 md:w-[400px] focus-visible:outline-blue-400 focus-visible:border active:bg-white focus:outline-none"
                 placeholder={t("search")}
                 defaultValue={trackingNumber ?? ""}
                 onChange={onSearchChange}
